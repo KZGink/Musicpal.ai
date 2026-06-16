@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPal.ai - Your Music Suggestion AI</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="header">
+        <h1>🎧 MusicPal.ai</h1>
+        <p>A simple AI to suggest music by (genre, artist, or year).</p>
+        
+        <nav class="user-nav">
+            <a href="#" onclick="showFavorites()">Your Favorite Tracks</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="search-section">
+            <label for="music-search">What music are you looking for?</label>
+            <input type="text" id="music-search" placeholder="E.g., Rock, Exists, 2010..." onkeyup="filterMusic()">
+        </div>
+
+        <div class="results-container">
+            <h2>Suggested Tracks:</h2>
+            <div id="music-list">
+                <p class="placeholder-text">Type a keyword above to get started!</p>
+            </div>
+        </div>
+
+        <audio id="audio-player" controls></audio>
+        
+        <div class="integrated-controls">
+            <button id="loop-btn" onclick="toggleLoop()" title="Toggle Loop for current song">
+                🔁 Loop OFF
+            </button>
+            
+            <button id="autoplay-btn" onclick="toggleAutoplay()" title="Toggle automatic playback of favorite tracks">
+                ▶️ Autoplay ON (Favs)
+            </button>
+        </div>
+        
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MusicPal.ai First Gen</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
